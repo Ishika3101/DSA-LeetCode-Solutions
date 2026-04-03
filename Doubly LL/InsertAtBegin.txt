@@ -1,0 +1,23 @@
+class Node {
+    int data;
+    Node prev, next;
+
+    Node(int data) {
+        this.data = data;
+        this.prev = null;
+        this.next = null;
+    }
+}
+
+public class InsertBeginning {
+    public static Node insertAtStart(Node head, int data) {
+        Node newNode = new Node(data);
+
+        if (head != null) {
+            head.prev = newNode;
+            newNode.next = head;
+        }
+
+        return newNode;
+    }
+}
